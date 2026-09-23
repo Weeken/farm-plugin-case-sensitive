@@ -41,14 +41,14 @@
     "options.d.ts"
   ],
   "optionalDependencies": {
-    "farm-plugin-case-sensitive-darwin-arm64": "0.0.1",
-    "farm-plugin-case-sensitive-darwin-x64": "0.0.1",
-    "farm-plugin-case-sensitive-linux-arm64-gnu": "0.0.1",
-    "farm-plugin-case-sensitive-linux-arm64-musl": "0.0.1",
-    "farm-plugin-case-sensitive-linux-x64-gnu": "0.0.1",
-    "farm-plugin-case-sensitive-linux-x64-musl": "0.0.1",
-    "farm-plugin-case-sensitive-win32-arm64-msvc": "0.0.1",
-    "farm-plugin-case-sensitive-win32-ia32-msvc": "0.0.1",
-    "farm-plugin-case-sensitive-win32-x64-msvc": "0.0.1"
+    "farm-plugin-case-sensitive-darwin-arm64": "0.0.2",
+    "farm-plugin-case-sensitive-darwin-x64": "0.0.2",
+    "farm-plugin-case-sensitive-linux-arm64-gnu": "0.0.2",
+    "farm-plugin-case-sensitive-linux-arm64-musl": "0.0.2",
+    "farm-plugin-case-sensitive-linux-x64-gnu": "0.0.2",
+    "farm-plugin-case-sensitive-linux-x64-musl": "0.0.2",
+    "farm-plugin-case-sensitive-win32-arm64-msvc": "0.0.2",
+    "farm-plugin-case-sensitive-win32-ia32-msvc": "0.0.2",
+    "farm-plugin-case-sensitive-win32-x64-msvc": "0.0.2"
   }
 }
