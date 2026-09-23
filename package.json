@@ -5,6 +5,10 @@
   "types": "scripts/index.d.ts",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Weeken/farm-plugin-case-sensitive"
+  },
   "devDependencies": {
     "@farmfe/plugin-tools": "latest"
   },
