@@ -1,6 +1,6 @@
 {
   "name": "farm-plugin-case-sensitive",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "scripts/index.js",
   "types": "scripts/index.d.ts",
   "type": "module",
@@ -39,5 +39,16 @@
   "files": [
     "scripts",
     "options.d.ts"
-  ]
+  ],
+  "optionalDependencies": {
+    "farm-plugin-case-sensitive-darwin-arm64": "0.0.1",
+    "farm-plugin-case-sensitive-darwin-x64": "0.0.1",
+    "farm-plugin-case-sensitive-linux-arm64-gnu": "0.0.1",
+    "farm-plugin-case-sensitive-linux-arm64-musl": "0.0.1",
+    "farm-plugin-case-sensitive-linux-x64-gnu": "0.0.1",
+    "farm-plugin-case-sensitive-linux-x64-musl": "0.0.1",
+    "farm-plugin-case-sensitive-win32-arm64-msvc": "0.0.1",
+    "farm-plugin-case-sensitive-win32-ia32-msvc": "0.0.1",
+    "farm-plugin-case-sensitive-win32-x64-msvc": "0.0.1"
+  }
 }

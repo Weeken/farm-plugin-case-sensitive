@@ -11,6 +11,34 @@ importers:
       '@farmfe/plugin-tools':
         specifier: latest
         version: 0.1.1
+    optionalDependencies:
+      farm-plugin-case-sensitive-darwin-arm64:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-darwin-x64:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-linux-arm64-gnu:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-linux-arm64-musl:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-linux-x64-gnu:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-linux-x64-musl:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-win32-arm64-msvc:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-win32-ia32-msvc:
+        specifier: 0.0.1
+        version: 0.0.1
+      farm-plugin-case-sensitive-win32-x64-msvc:
+        specifier: 0.0.1
+        version: 0.0.1
 
   playground:
     dependencies:
@@ -656,6 +684,63 @@ packages:
   farm-browserslist-generator@1.0.5:
     resolution: {integrity: sha512-igffWSQATGV2ZJEvDBIB9Q2QfVOr+vv/JTZaaNoYfW/nrCGZ58zyJ0kSkFQEvptGUWf6idECqj82ykli4Ueplw==}
     engines: {node: '>=16.15.1', npm: '>=7.0.0', pnpm: '>=3.2.0', yarn: '>=1.13'}
+
+  farm-plugin-case-sensitive-darwin-arm64@0.0.1:
+    resolution: {integrity: sha512-PvAEbm7Z7RW2xynnAR+iTUlS7a7fS6d1yKi7K5QTZD+88BTzBipUfwj1vtA6Eo69ebYh7oPVQgMIench75Vc5A==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  farm-plugin-case-sensitive-darwin-x64@0.0.1:
+    resolution: {integrity: sha512-jC5vE6wQUojrwGmrPnVp2vpuYxxNRAMGGb5oPI8JGLLwFvD+EEnnJU/R9FStgFE7bPvC2D8WVXEqtNUKHkq0eg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
+  farm-plugin-case-sensitive-linux-arm64-gnu@0.0.1:
+    resolution: {integrity: sha512-1zucDOREY0Uh9CNtUI/xhHTEZNS0gtdnhrJ5oiGmGVwijmm8bDyJkrynQTPpsZZnIYmX5hgbWAGjG2d+W298WQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  farm-plugin-case-sensitive-linux-arm64-musl@0.0.1:
+    resolution: {integrity: sha512-Chu7Z3fcVYKE7CATQ5OkG2EYJuTgt+wZOI2H6Rfz5UI+0tWOflkrdEP66vA4CccWYt+pglK9PAfNG3jpGIgV7w==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  farm-plugin-case-sensitive-linux-x64-gnu@0.0.1:
+    resolution: {integrity: sha512-HkYKnvx/0/bIQtSXbC4GyiclqN22tB5v2hZIJJ2oAJV8xCOGoj8T6oKd0oF1klAIXNHwt76Lfg2sIKw0m5dc+g==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  farm-plugin-case-sensitive-linux-x64-musl@0.0.1:
+    resolution: {integrity: sha512-Ne6RV6CtErOymM8qdOugVNVBeHueH6Axbr8VuJ3mL34Fb7RW9fXHAxmSZYqROIu1BpqrIv4QBpV4V4629iVIkQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  farm-plugin-case-sensitive-win32-arm64-msvc@0.0.1:
+    resolution: {integrity: sha512-Kp9uoSiTBD7+/rRdrKMDemcTr5jBGwG2P5Y91rTEsQ6IcPR+PmkxplEQuzyMep1mqzO+uOzMSc+VLI/VUeINxQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+
+  farm-plugin-case-sensitive-win32-ia32-msvc@0.0.1:
+    resolution: {integrity: sha512-0P3JWz8mPnIT5NbTyFiQhr+S5RpO5hQy6KbR2LBJpkc+9Lxs5z29jNIZozXFti6TTRTXLNQTAW9gl5enLEoGeQ==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+
+  farm-plugin-case-sensitive-win32-x64-msvc@0.0.1:
+    resolution: {integrity: sha512-ViPJR3bDTBEDB3kR3HLviaA9RpEr0kbfhxsn9QrLOP5tjcDz5UWTRqq2VClHIZCkjAx/jMysUp5aND++MdCUcw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
 
   farm-plugin-replace-dirname-darwin-arm64@0.2.1:
     resolution: {integrity: sha512-9FThv/qoFuj3cJjv9P6YnXbBwPQ5TwGjnr50ejXdZn13Ehz0+7w7EscbRsZHNvT7p24p6i0Y9NUSallcWc2syw==}
@@ -2149,6 +2234,33 @@ snapshots:
       object-path: 0.11.8
       semver: 7.8.5
       ua-parser-js: 1.0.41
+
+  farm-plugin-case-sensitive-darwin-arm64@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-darwin-x64@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-linux-arm64-gnu@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-linux-arm64-musl@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-linux-x64-gnu@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-linux-x64-musl@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-win32-arm64-msvc@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-win32-ia32-msvc@0.0.1:
+    optional: true
+
+  farm-plugin-case-sensitive-win32-x64-msvc@0.0.1:
+    optional: true
 
   farm-plugin-replace-dirname-darwin-arm64@0.2.1:
     optional: true
