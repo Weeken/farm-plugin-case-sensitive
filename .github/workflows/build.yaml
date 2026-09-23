@@ -27,8 +27,9 @@ jobs:
               npm run build -- --target x86_64-unknown-linux-musl --abi linux-x64-musl
           - os: windows-latest
             abi: win32-x64-msvc
-          - os: macos-13
+          - os: macos-14
             abi: darwin-x64
+            target: x86_64-apple-darwin
           - os: macos-latest
             abi: darwin-arm64
 
@@ -69,16 +70,16 @@ jobs:
           #   osxcross: true
           #   zig: true
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Cache rust artifacts
         uses: Swatinem/rust-cache@v2
         with:
           shared-key: rust-build-${{ matrix.settings.abi }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 22
       - name: Install Dependencies
-        run: npm install -g pnpm@9.1.0 && pnpm i --frozen-lockfile
+        run: npm install -g pnpm && pnpm i --frozen-lockfile
       - run: rustup target add ${{ matrix.settings.target }}
         if: ${{ matrix.settings.target }}
       # Use the v1 of this action
@@ -90,7 +91,8 @@ jobs:
       - uses: goto-bus-stop/setup-zig@v2
         if: ${{ matrix.settings.zig }}
         with:
-          version: 0.14.0-dev.1983+6bf52b050
+          version: master
+          cache: true
       - name: Build in docker
         uses: addnab/docker-run-action@v3
         if: ${{ matrix.settings.docker }}
@@ -108,7 +110,7 @@ jobs:
         run: ${{ matrix.settings.build }}
         shell: bash
       - name: Upload Plugin
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ github.sha }}-${{ matrix.settings.abi }}-plugin
           path: npm/${{ matrix.settings.abi }}/index.farm
