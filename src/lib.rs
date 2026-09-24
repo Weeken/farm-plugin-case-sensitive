@@ -1,6 +1,10 @@
 #![deny(clippy::all)]
 
-use std::{fs, path::{Component, Path, PathBuf}, sync::Arc};
+use std::{
+  fs,
+  path::{Component, Path, PathBuf},
+  sync::Arc,
+};
 
 use farmfe_core::{
   config::Config,
@@ -19,6 +23,7 @@ impl FarmPluginCaseSensitive {
   }
 }
 
+// 逐级检查路径每一段的大小写是否与文件系统中的实际名称一致。
 fn find_case_mismatch(path: &Path) -> Option<(PathBuf, PathBuf)> {
   let mut current = PathBuf::new();
 
@@ -32,6 +37,7 @@ fn find_case_mismatch(path: &Path) -> Option<(PathBuf, PathBuf)> {
       }
       Component::Normal(expected) => {
         let parent = current.clone();
+        // 使用不区分大小写的匹配找到磁盘上的真实路径段。
         let actual = fs::read_dir(&parent)
           .ok()?
           .filter_map(|entry| entry.ok())
@@ -65,6 +71,7 @@ impl Plugin for FarmPluginCaseSensitive {
     _context: &Arc<CompilationContext>,
     _hook_context: &PluginHookContext,
   ) -> Result<Option<PluginLoadHookResult>> {
+    // Farm 已经完成模块解析，这里检查最终加载文件的真实路径。
     let resolved_path = Path::new(param.resolved_path);
 
     if let Some((requested, actual)) = find_case_mismatch(resolved_path) {
